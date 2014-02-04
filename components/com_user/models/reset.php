@@ -123,7 +123,6 @@ class UserModelReset extends JModel
 		$db	= &JFactory::getDBO();
 		$db->setQuery('SELECT id, activation FROM #__users WHERE block = 0 AND username = '.$db->Quote($username));
 
-		$row = $db->loadObject();
 
 		// Verify the token
 		if (!$row)
